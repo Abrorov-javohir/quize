@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:quize/controller/quiz_controller.dart';
 import 'package:quize/screen/home_screen.dart';
 
 void main() {
-  runApp(Quiz());
+  runApp(QuizApp());
 }
 
-class Quiz extends StatelessWidget {
-  const Quiz({super.key});
-
+class QuizApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+    return ChangeNotifierProvider(
+      create: (context) => ProductController(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen(),
+      ),
     );
   }
 }

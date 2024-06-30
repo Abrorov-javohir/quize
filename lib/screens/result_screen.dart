@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quize/screen/home_screen.dart';
 import 'package:quize/screens/quiz_screen.dart';
+import 'package:quize/views/add_test.dart';
 
 class ResultScreen extends StatelessWidget {
   final int correctAnswers;
